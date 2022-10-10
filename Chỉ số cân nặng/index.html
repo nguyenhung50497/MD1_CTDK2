@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <label for="weight">Cân nặng(kg):</label>
+    <br>
+    <input type="text" name="weight" id="weight">
+    <br>
+    <label for="height">Chiều cao(m):</label>
+    <br>
+    <input type="text" name="height" id="height">
+    <br><br>
+    <button onclick="result()">Kết quả</button>
+<script>
+    function result() {
+        let weight = document.getElementById("weight").value;
+        let height = document.getElementById("height").value;
+        let result = weight / (height ** 2);
+        if (result < 18.5) {
+            document.write("Underweight");
+        }
+        else if (result < 25) {
+            document.write("Normal");
+        }
+        else if (result < 30) {
+            document.write("Overweight");
+        }
+        else {
+            document.write("Obese");
+        }
+    }
+</script>
+</body>
+</html>
