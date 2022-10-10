@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<style>
+  #div1 {
+    border-collapse: collapse;
+    border: 1px solid black;
+    width: 30%;
+    height: 400px;
+  }
+  table {
+    margin-top: 5px;
+    width: 100%;
+    height: 80%;
+  }
+  th {
+    width: 25%;
+    height: 25%;
+  }
+  button {
+    width: 90%;
+    height: 90%;
+    font-size: 30px;
+  }
+  #hienthi {
+    width: 95%;
+    height: 40px;
+    font-size: 30px;
+    text-align: right;
+    margin: 10px;
+  }
+</style>
+<body>
+<div id="div1">
+    <div><input type="text" id="hienthi"></div>
+    <table>
+      <tr>
+        <th><button type="button" value="1" name="btn" id="nb1" onclick="inputValue(1)">1</button></th>
+        <th><button type="button" value="2" name="btn" id="nb2" onclick="inputValue(2)">2</button></th>
+        <th><button type="button" value="3" name="btn" id="nb3" onclick="inputValue(3)">3</button></th>
+        <th><button type="button" value="+" name="op" id="cong" onclick="inputValue('+')">+</button></th>
+      </tr>
+      <tr>
+        <th><button type="button" value="4" name="btn" id="nb4" onclick="inputValue(4)">4</button></th>
+        <th><button type="button" value="5" name="btn" id="nb5" onclick="inputValue(5)">5</button></th>
+        <th><button type="button" value="6" name="btn" id="nb6" onclick="inputValue(6)">6</button></th>
+        <th><button type="button" value="-" name="op" id="tru" onclick="inputValue('-')">-</button></th>
+      </tr>
+      <tr>
+        <th><button type="button" value="7" name="btn" id="nb7" onclick="inputValue(7)">7</button></th>
+        <th><button type="button" value="8" name="btn" id="nb8" onclick="inputValue(8)">8</button></th>
+        <th><button type="button" value="9" name="btn" id="nb9" onclick="inputValue(9)">9</button></th>
+        <th><button type="button" value="*" name="op" id="nhan" onclick="inputValue('*')">X</button></th>
+      </tr>
+      <tr>
+        <th><button type="button" value="C" name="C" id="C" onclick="xoa()">C</button></th>
+        <th><button type="button" value="0" name="btn" id="nb0" onclick="inputValue(0)">0</button></th>
+        <th><button type="button" value="=" name="result" id="result" onclick="result()">=</button></th>
+        <th><button type="button" value="/" name="op" id="chia" onclick="inputValue('/')">/</button></th>
+      </tr>
+    </table>
+</div>
+<script>
+  function inputValue(giatri) {
+    document.getElementById("hienthi").value += giatri;
+  }
+  function result() {
+    let kq = document.getElementById('hienthi').value;
+    document.getElementById('hienthi').value = eval(kq);
+  }
+  function xoa() {
+    document.getElementById("hienthi").value = "";
+  }
+</script>
+</body>
+</html>
