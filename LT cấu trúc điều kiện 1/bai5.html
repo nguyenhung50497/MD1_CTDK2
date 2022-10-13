@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let d15p = +prompt("Nhập điểm kiểm tra 15p:");
+    let d1t = +prompt("Nhập điểm kiểm tra 1 tiết:");
+    let dgk = +prompt("Nhập điểm kiểm thi giữa kì:");
+    let dck = +prompt("Nhập điểm kiểm thi cuối kỳ:");
+    let tb = (d15p + d1t + dgk + dck) / 4;
+    if (tb < 5) {
+        alert("Học sinh kém")
+    }
+    else if (tb < 7) {
+        alert("Học sinh trung bình")
+    }
+    else if (tb < 8) {
+        alert("Học sinh khá")
+    }
+    else if (tb < 9) {
+        alert("Học sinh giỏi")
+    }
+    else {
+        alert("Học sinh xuất sắc")
+    }
+</script>
+</body>
+</html>
