@@ -13,11 +13,11 @@
 </head>
 <body>
 <div>
-  <img id="img1" src="./img/0.jpg" onclick="changeImg1()">
+  <img id="img1" src="./img/0.jpg" onclick="changeImg1()" alt="anh1">
   <br>
-  <img id="img2" src="./img/1.jpg" onclick="changeImg2()">
+  <img id="img2" src="./img/1.jpg" onclick="changeImg2()" alt="anh2">
   <br>
-  <img id="img3" src="./img/2.jpg" onclick="changeImg3()">
+  <img id="img3" src="./img/2.jpg" onclick="changeImg3()" alt="anh3">
 </div>
 
 <script>
@@ -29,23 +29,20 @@
   let img3 = document.getElementById('img3');
 
   function changeImg1() {
-    let random = Math.floor(Math.random() * 3); // 0 -> 3
-    console.log(random)
     a++;
     if(a > 2){
       a = 0;
     }
-    img1.src = "./img/" + random + ".jpg"
+    img1.src = "./img/" + a + ".jpg";
     check();
   }
 
   function changeImg2() {
-
     b++;
     if(b > 2){
       b = 0;
     }
-    img2.src = "./img/" + b + ".jpg"
+    img2.src = "./img/" + b + ".jpg";
     check();
   }
 
@@ -54,24 +51,19 @@
     if(c > 2){
       c = 0;
     }
-    img3.src = "./img/" + c + ".jpg"
-    check()
+    img3.src = "./img/" + c + ".jpg";
+    check();
   }
 
   function check() {
-    // a = b  b = c -> a = c
-    // if a == 1 && b == 1 && c == 1
-    // else if a == 0 b == 0 c == 0
-    // else if a == 2 b == 2 c == 2
-    // else
-    if (a === b && b === c ) {
+    if (a == b && b == c ) {
       img1.style.boxShadow = 'red 4px 4px 9px';
       img2.style.boxShadow = 'red 4px 4px 9px';
       img3.style.boxShadow = 'red 4px 4px 9px';
     }else {
-      img1.style.boxShadow = 'white 4px 4px 9px';
-      img2.style.boxShadow = 'white 4px 4px 9px';
-      img3.style.boxShadow = 'white 4px 4px 9px';
+      img1.style.boxShadow = 'black 4px 4px 9px';
+      img2.style.boxShadow = 'black 4px 4px 9px';
+      img3.style.boxShadow = 'black 4px 4px 9px';
     }
   }
 </script>
